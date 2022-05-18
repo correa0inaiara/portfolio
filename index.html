@@ -4,150 +4,9 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="./images/favicon32x32.ico">
+	<link rel="stylesheet" href="./estilo.css">
 	<title>Estrutura Básica</title>
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-		}
-
-		.page-container {
-			margin: 10px;
-			padding: 30px 10px;
-			border: 2px dashed #191919;
-			text-align: center;
-			font-family: Arial;
-		}
-
-		.header-card {
-			background-color: rgb(71 136 196 / 50%);
-			box-shadow: 0px 3px 8px rgb(15 50 83);
-			border-radius: 10px;
-		}
-
-		.header-title {
-			font-size: 25px;
-			justify-content: center;
-			display: flex;
-			padding: 10px;
-			flex-direction: column;
-			align-items: center;
-		}
-
-		.header-name {
-			margin: 0;
-		}
-
-		.img-container {
-			width: 150px;
-			height: 100%;
-			margin: 50px auto 25px auto;
-		}
-
-		.img-container.img--html {
-			width: 200px;
-			height: 100%;
-		}
-
-		.img-container.img--icon {
-			width: 50px;
-			height: 100%;
-			margin: 10px;
-		}
-
-		.img-container img {
-			width: 100%;
-			height: 100%;
-		}
-
-		.quotation-block {
-			padding: 20px;
-		}
-		
-		.quotation-link {
-			display: block;
-		}
-
-		.quotation-quote {
-			font-size: 25px;
-		}
-
-		.quotation-author {
-			font-size: 20px;
-			font-weight: bold;
-			text-align: right;
-			margin: 10px 0;
-		}
-
-		a:visited,
-		a:link,
-		a:active {
-			cursor: pointer;
-			color: black;
-			text-decoration: none;
-		}
-
-		.footer-list {
-			padding: 0;
-			text-decoration: underline;
-			font-size: 18px;
-			list-style: none;
-			list-style-type: none;
-			display: inline-flex;
-		}
-
-		.footer-list li {
-			margin: 0 10px;
-		}
-
-		@media only screen and (min-width: 768px) {
-			.page-container {
-				margin: 50px;
-				padding: 80px 30px;
-			}
-			.header-card {
-				margin: 0 auto;
-    			width: 500px;
-			}
-			.header-title {
-				flex-direction: row;
-			}
-			.img-container.img--html {
-				width: 350px;
-				height: 100%;
-			}
-			.img-container.img--evolve {
-				width: 200px;
-				height: 100%;
-			}
-			.quotation-block {
-				margin: 60px;
-			}
-		}
-
-		@media only screen and (min-width: 1024px) {
-			.header-title {
-				font-size: 30px;
-			}
-			.title {
-				font-size: 30px;
-			}
-			.footer-list {
-				font-size: 20px;
-			}
-			.img-container {
-				margin: 50px auto 30px auto;
-			}
-			.img-container.img--html {
-				width: 500px;
-				height: 100%;
-			}
-			.img-container.img--evolve {
-				width: 250px;
-				height: 100%;
-			}
-		}
-	</style>
 </head>
 <body>
 	<div class="page-container">
@@ -155,14 +14,14 @@
 			<h1 class="header-title">
 				<p class="header-name">&lt;Naiara&gt;</p>
 				<div class="img-container img--icon">
-					<img src="./developer.png" alt="Developer Icon">
+					<img src="./images/developer.png" alt="Developer Icon">
 				</div>&lt;&bsol;Correa&gt;
 			</h1>
 		</header>
 		<section class="quotation-block">
 			<h2 class="title">Evolução Pessoal</h1>
 			<div class="img-container img--evolve">
-				<img src="./evolve.png" alt="Personal Development">
+				<img src="./images/evolve.png" alt="Personal Development">
 			</div>
 			<a class="quotation-link" target="_blank" href="https://pt.wikipedia.org/wiki/John_Ruskin">
 				<q class="quotation-quote">A maior recompensa pelo trabalho não é o que a pessoa ganha é o que ela se torna através dele.</q>
@@ -173,7 +32,7 @@
 			<header>
 				<h2 class="title">Desenvolvimento Técnico</h2>
 				<div class="img-container img--html">
-					<img src="./html.jpg" alt="HTML Development">
+					<img src="./images/html.jpg" alt="HTML Development">
 				</div>
 			</header>
 		</article>
