@@ -36,7 +36,6 @@ html, body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	filter: grayscale(0.5);
 	color: white;
 	cursor: pointer;
 	transition: 0.3s;
@@ -53,14 +52,13 @@ html, body {
 }
 
 .card-wrapper::before {
+	height: 100%;
+	width: 100%;
 	content: '';
 	position: absolute;
-	height: 100px;
-	width: 100px;
 	display: block;
 	border: 2px solid white;
-	opacity: 0;
-	transition: 0.3s;
+	filter: drop-shadow(2px 4px 6px black);
 }
 
 .card-wrapper h2 {
@@ -68,36 +66,12 @@ html, body {
 	text-transform: uppercase;
 	letter-spacing: 4px;
 	margin: 0;
-	transition: 0.3s;
 }
 
 .card-wrapper p {
 	font-size: 14px;
-	visibility: hidden;
-	opacity: 0;
 	font-weight: bold;
 	text-transform: uppercase;
-	transition: 0.3s;
-}
-
-.card:hover {
-	filter: unset;
-}
-
-.card:hover > .card-wrapper::before {
-	height: 100%;
-	width: 100%;
-	opacity: 1;
-}
-
-.card:hover > .card-wrapper {
-	filter: drop-shadow(2px 4px 6px black);
-}
-
-.card:hover > .card-wrapper p {
-	opacity: 1;
-	visibility: visible;
-	font-size: 14px;
 }
 
 .card-link:visited,
@@ -109,5 +83,48 @@ html, body {
 @media only screen and (min-width: 1024px) {
 	.container {
 		width: 50%;
+	}
+
+	.card {
+		filter: grayscale(0.5);
+	}
+
+	.card:hover {
+		filter: unset;
+	}
+
+	.card-wrapper::before {
+		height: 100px;
+		width: 100px;
+		transition: 0.3s;
+		opacity: 0;
+	}
+
+	.card:hover > .card-wrapper::before {
+		opacity: 1;
+		filter: unset;
+		height: 100%;
+		width: 100%;
+	}
+
+	.card:hover > .card-wrapper {
+		filter: drop-shadow(2px 4px 6px black);
+	}
+
+	.card-wrapper p {
+		opacity: 0;
+		visibility: hidden;
+		font-size: 14px;
+		transition: 0.3s;
+	}
+
+	.card-wrapper h2 {
+		transition: 0.3s;
+	}
+
+	.card:hover > .card-wrapper p {
+		opacity: 1;
+		visibility: visible;
+		font-size: 14px;
 	}
 }
