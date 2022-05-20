@@ -2,5 +2,7 @@
 
 Repositório
 - Aqui você encontra os arquivos do projeto
-- E abaixo o link para o Site
-[Website #2](https://scratch-familiar-cloth.glitch.me/)
+- Esse website contém:
+	- Uma página de menu inicial: [Website #2](https://scratch-familiar-cloth.glitch.me/). Nesse menu você encontra as seguintes páginas:
+		- Efeito de Transição
+		- Efeito de Menu Hambúrguer
