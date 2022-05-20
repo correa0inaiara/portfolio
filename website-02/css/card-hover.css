@@ -1,0 +1,113 @@
+html, body {
+	font-family: sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.background-image {
+    background-image: url('../images/landscape.jpg');
+	filter: blur(8px);
+	-webkit-filter: blur(8px);
+	height: 100vh;
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+	position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	width: 80%;
+}
+
+.card {
+	padding: 10px;
+	height: 400px;
+	width: 100%;
+	background-image: url('../images/landscape.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	filter: grayscale(0.5);
+	color: white;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.card-wrapper {
+	padding: 30px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.card-wrapper::before {
+	content: '';
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	display: block;
+	border: 2px solid white;
+	opacity: 0;
+	transition: 0.3s;
+}
+
+.card-wrapper h2 {
+	font-size: 40px;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	margin: 0;
+	transition: 0.3s;
+}
+
+.card-wrapper p {
+	font-size: 14px;
+	visibility: hidden;
+	opacity: 0;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: 0.3s;
+}
+
+.card:hover {
+	filter: unset;
+}
+
+.card:hover > .card-wrapper::before {
+	height: 100%;
+	width: 100%;
+	opacity: 1;
+}
+
+.card:hover > .card-wrapper {
+	filter: drop-shadow(2px 4px 6px black);
+}
+
+.card:hover > .card-wrapper p {
+	opacity: 1;
+	visibility: visible;
+	font-size: 14px;
+}
+
+.card-link:visited,
+.card-link:link,
+.card-link:active {
+	color: #ffffff;
+}
+
+@media only screen and (min-width: 1024px) {
+	.container {
+		width: 50%;
+	}
+}
