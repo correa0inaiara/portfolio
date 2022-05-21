@@ -6,3 +6,6 @@ Repositório
 	- Uma página de menu inicial: [Website #2](https://scratch-familiar-cloth.glitch.me/). Nesse menu você encontra as seguintes páginas:
 		- Efeito de Transição
 		- Efeito de Menu Hambúrguer
+		- Keyframes
+		- Desenho com CSS
+		- Projeto Final
