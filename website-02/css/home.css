@@ -50,6 +50,7 @@ html, body {
 .menu-item__link {
 	display: flex;
     align-items: center;
+	min-height: 42px;
 }
 
 .menu-item__link:visited,
