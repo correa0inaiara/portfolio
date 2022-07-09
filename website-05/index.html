@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contador</title>
+	<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+	<header>
+		<h1>Contador</h1>
+		<p>Clique nos botões para alterar o valor.</p>
+	</header>
+
+	
+	<div id="counter">
+		<button name="subtrair" onclick="decrement()">-</button>
+		<span id="currentNumber">0</span>
+		<button name="adicionar" onclick="increment()">+</button>
+	</div>
+
+	<label class="label" for="steps">
+		<span class="label-text">Número de Passos para Incrementar ou Decrementar</span>
+		<input id="steps" type="number" value="1" step="1" min="1" max="100">
+	</label>
+	<button>Increase</button>
+
+	<script src="./assets/js/script.js"></script>
+</body>
+</html>
