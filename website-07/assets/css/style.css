@@ -1,0 +1,120 @@
+* {
+	font-family: "Open Sans", sans-serif;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--first-color);
+	margin: 0 auto;
+    max-width: 300px
+}
+
+.title {
+	color: var(--fifth-color);
+}
+
+main {
+	width: 80%;
+}
+
+.calculator {
+	border-radius: 10px;
+	box-shadow: 4px 5px 0px 2px var(--fourth-color);
+	/* box-shadow: 0px 2px 0px 6px var(--fourth-color); */
+	/* -5px 10px 13px 3px var(--fifth-color) */
+	/* box-shadow: 0px 0px 6px 1px var(--fifth-color); */
+    padding: 20px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: var(--third-color);
+}
+
+.display {
+	border-radius: 10px;
+    /* border: 3px solid var(--fourth-color); */
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 6px 1px var(--fifth-color);
+}
+
+.display-value {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	padding: 15px;
+	overflow: auto;
+    text-align: end;
+    border-radius: 10px;
+	margin: 0;
+	box-shadow: 0px 0px 5px var(--fourth-color);
+	/* border: 1px solid var(--fourth-color); */
+	height: 70px;
+	color: var(--fourth-color);
+	background-color: var(--second-color);
+}
+
+.display-value__text {
+	color: var(--fourth-color);
+	opacity: 1;
+	height: 16px;
+}
+
+.display-value__text .display-value__text--animate {
+	animation: fadeInOut 0.5s ease-in-out 0s;
+}
+
+@keyframes fadeInOut {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.keypad {
+	border-radius: 10px;
+    background-color: var(--second-color);
+    padding: 20px;
+	box-shadow: 0px 0px 5px var(--fourth-color);
+	display: flex;
+    flex-direction: column;
+}
+
+.keypad-numbers {
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.keypad-operations {
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin-top: 15px;
+}
+
+.keypad button {
+    padding: 5px;
+    border-radius: 10px;
+	background-color: var(--fourth-color);
+    color: var(--first-color);
+}
+
+footer {
+	position: absolute;
+    bottom: 40px;
+    padding: 30px;
+    width: calc(100% - 60px);
+    text-align: center;
+	color: var(--fifth-color);
+}
+
