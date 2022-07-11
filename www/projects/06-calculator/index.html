@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculator</title>
+	<link rel="stylesheet" href="./assets/css/variables.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+	<header>
+		<h1 class="title">Calculator</h1>
+	</header>
+	<main>
+		<div class="calculator">
+			<div class="display">
+				<p class="display-value">
+					<span class="display-value__history"></span>
+					<span class="display-value__text"></span>
+				</p>
+			</div>
+			<div class="keypad">
+				<div class="keypad-numbers">
+					<button class="keypad-numbers__num">0</button>
+					<button class="keypad-numbers__num">1</button>
+					<button class="keypad-numbers__num">2</button>
+					<button class="keypad-numbers__num">3</button>
+					<button class="keypad-numbers__num">4</button>
+					<button class="keypad-numbers__num">5</button>
+					<button class="keypad-numbers__num">6</button>
+					<button class="keypad-numbers__num">7</button>
+					<button class="keypad-numbers__num">8</button>
+					<button class="keypad-numbers__num">9</button>
+				</div>
+				<div class="keypad-operations">
+					<button onclick="sum()" class="keypad-operations__sum">+</button>
+					<button onclick="subtraction()" class="keypad-operations__subtraction">-</button>
+					<button onclick="multiplication()" class="keypad-operations__multiplication">*</button>
+					<button onclick="division()" class="keypad-operations__division">/</button>
+					<button onclick="equal()" class="keypad-operations__equal">=</button>
+					<button onclick="clearAll()" class="keypad-operations__equal">Clear</button>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>Naiara @ 2022</footer>
+	<script src="./assets/js/script.js"></script>
+</body>
+</html>
