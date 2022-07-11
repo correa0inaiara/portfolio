@@ -61,8 +61,15 @@ a {
 	text-decoration: none;
 }
 
-a:visited {
+a:visited,
+a:link,
+a:active,
+a:hover {
 	color: var(--second-color);
+}
+
+a:hover {
+	border-bottom: 2px solid var(--second-color);
 }
 
 /* main */
@@ -222,6 +229,10 @@ section p {
 
 address {
 	font-size: 0.9rem;
+}
+
+.contact address a {
+	color: var(--third-color)
 }
 
 /* footer */
