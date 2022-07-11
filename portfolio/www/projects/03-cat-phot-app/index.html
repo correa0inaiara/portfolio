@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Cat Photo App</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<h1 class="header-title">Cat Photo App</h1>
+		</header>
+		<h2 class="title">Cat Photos</h2>
+		<main class="main section">
+			<p class="paragraph">
+				Click here to view more
+				<a href="#">cat photos.</a>
+			</p>
+			<div class="img">
+				<img src="images/relaxing-cat.jpg" alt="Cat Upside Down Photo" class="img-tag">
+			</div>
+		</main>
+		<h2 class="title">Cat Lists</h2>
+		<article class="lists section">
+			<section class="love">
+				<h3 class="subtitle">Things cats love:</h3>
+				<ul class="list">
+					<li class="list-item">Cat Nip</li>
+					<li class="list-item">Laser Pointers</li>
+					<li class="list-item">Lasagna</li>
+				</ul>
+				<div class="picture">
+					<div class="img">
+						<img src="images/lasagna.jpg" alt="Lasagna Picture" class="img-tag">
+					</div>
+					<p class="text">Cats <i>love</i> lasagna.</p>
+				</div>
+			</section>
+			<section class="hate">
+				<h3 class="subtitle">Things cats hate:</h3>
+				<ul class="list">
+					<li class="list-item">Flea Treatment</li>
+					<li class="list-item">Thunder</li>
+					<li class="list-item">Other Cats</li>
+				</ul>
+				<div class="picture">
+					<div class="img">
+						<img src="images/cats.jpg" alt="Lasagna Picture" class="img-tag">
+					</div>
+					<p class="text">Cats <b>hate</b> other cats.</p>
+				</div>
+			</section>
+		</article>
+		<section class="form">
+			<h2 class="title">Cat Form</h2>
+			<form action="" class="form">
+				<fieldset class="fieldset">
+					<legend>Is your cat an indoor or outdoor cat?</legend>
+					<label for="indoor" class="label">
+						<input type="radio" name="indoor-outdoor" id="indoor">
+						Indoor
+					</label>
+					<label for="outdoor" class="label">
+						<input type="radio" name="indoor-outdoor" id="outdoor">
+						Outdoor
+					</label>
+				</fieldset>
+				<fieldset class="fieldset">
+					<legend>What's your cat's personality?</legend>
+					<label for="loving" class="label">
+						<input type="checkbox" name="personality" id="loving">
+						Loving
+					</label>
+					<label for="lazy" class="label">
+						<input type="checkbox" name="personality" id="lazy">
+						Lazy
+					</label>
+					<label for="energetic" class="label">
+						<input type="checkbox" name="personality" id="energetic">
+						Energetic
+					</label>
+				</fieldset>
+				<fieldset class="fieldset fieldset--margin-bottom">
+					<legend>Cat Photo URL</legend>
+					<label class="label" for="photoURL">
+						<input type="text" id="photoURL">
+					</label>
+				</fieldset>
+				<button class="button" type="submit">Submit</button>
+			</form>
+		</section>
+		<footer class="footer">
+			<h4 class="footer-text">Cat Photo App</h4>
+			<h5 class="footer-text">Made in the <a target="_blank" href="https://www.freecodecamp.org/learn/2022/responsive-web-design/">FreeCodeCamp Responsive Web Design</a> Course</h5>
+		</footer>
+	</div>
+</body>
+</html>
