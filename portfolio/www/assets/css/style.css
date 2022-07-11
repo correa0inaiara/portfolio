@@ -18,14 +18,6 @@ body {
 	max-width: 500px;
 }
 
-/* wrapper */
-
-/* .wrapper {
-	width: 80%;
-	margin: 0 auto;
-	max-width: 500px;
-} */
-
 /* header */
 
 header {
@@ -42,7 +34,6 @@ header {
     letter-spacing: 7px;
     border-width: 2px;
     border-color: var(--first-color);
-    /* border-style: dashed; */
     border-radius: 10px;
 }
 
@@ -51,7 +42,6 @@ header {
 nav {
 	border-radius: 10px;
     padding: 15px;
-    /* margin-top: 30px; */
     color: var(--second-color);
     background-color: var(--fourth-color);
 }
@@ -59,6 +49,7 @@ nav {
 nav ul {
 	list-style-type: none;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 }
 
@@ -81,17 +72,82 @@ main {
 
 /* section */
 section {
-	margin: 30px;
+	margin: 15px;
 }
 
 section h3 {
 	text-align: center;
 	text-transform: uppercase;
 	margin: 25px 0;
+	color: var(--fourth-color);
 }
 
-section h4 {
+/* section h4 {
+	line-height: 1.6;
 	text-align: center;
+    color: var(--third-color);
+} */
+
+section p {
+	line-height: 1.6;
+	color: var(--second-color);
+    text-align: justify;
+}
+
+/* home */
+
+.home-paragraph {
+	text-align: center;
+	line-height: 2;
+}
+
+.home-introduction__name {
+	border-bottom: 5px solid var(--second-color);
+}
+
+.home-highlight {
+	line-height: 2;
+	margin-top: 25px;
+    text-align: center;
+    border-radius: 10px;
+    color: var(--second-color);
+    background-color: var(--third-color);
+
+
+    /* color: var(--first-color);
+    background-color: var(--second-color); */
+
+	/*     font-size: 1.1rem;
+    padding: 10px;
+    margin-top: 10px;
+    color: var(--second-color);
+    background-color: var(--third-color);
+    text-align: center;
+    border-radius: 10px;
+    text-transform: uppercase; */
+}
+
+/* skills */
+
+#skills ul {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+}
+
+#skills ul li {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.skill-name {
+	margin: 25px 0;
+}
+
+.skill-name + img {
+	width: 80%;
+	height: auto;
 }
 
 /* projects */
@@ -143,11 +199,29 @@ section h4 {
 
 .list-item__name {
 	border-bottom: 10px solid rgb(16 16 82);
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     color: var(--third-color);
     padding-bottom: 10px;
     text-transform: uppercase;
+}
+
+/* contact */
+
+.contact {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 2;
+}
+
+.contact-info {
+	text-align: center;
+}
+
+address {
+	font-size: 0.9rem;
 }
 
 /* footer */
