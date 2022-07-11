@@ -9,10 +9,12 @@ function handleClick(event) {
 			return false;
 		}
 
-		if (typeof inpPalindrome.value !== 'string') {
+		if (typeof inpPalindrome.value !== 'string' || !/^[a-zA-Z]+$/.test(inpPalindrome.value)) {
 			errorMessage.innerHTML = "Input needs to be a text with letters only, cannot contain symbols, numbers or special characters.";
 			return false;
 		}
+		
+		errorMessage.innerHTML = ''
 
 		checkPalindrome(inpPalindrome.value)
 	}
