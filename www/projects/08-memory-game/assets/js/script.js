@@ -3,7 +3,26 @@ let cardsFlipped = []
 let sameCards = []
 let score = 0
 
-addEventListener('click', handleClick, false)
+function handleStartGame() {
+	showCards()
+}
+
+function showCards() {
+	for (var cardBox of cardBoxes) {
+		toggleFlip(cardBox.children[0], cardBox.children[1], 'back')
+	}
+	setTimeout(() => {
+		for (var cardBox of cardBoxes) {
+			toggleFlip(cardBox.children[0], cardBox.children[1], 'front')
+		}
+		
+		startGame()
+	}, 3000)
+}
+
+function startGame() {
+	addEventListener('click', handleClick, false)
+}
 
 function handleClick (event) {
 	const element = event.target
@@ -58,6 +77,12 @@ function handleClick (event) {
 	}
 }
 
+function handleResetScore(event) {
+	score = 0
+	const scoreEl = document.getElementById('score')
+	scoreEl.innerHTML = ' ' + score
+}
+
 function handleNewGame(event) {
 	sameCards = []
 	cardsFlipped = []
@@ -71,6 +96,7 @@ function handleNewGame(event) {
 	}
 	
 	loadImages()
+	showCards()
 } 
 
 function loadImages() {
@@ -108,13 +134,10 @@ function flipToFront() {
 	setTimeout(() => {
 		cardBox1.classList.toggle('flip')
 		cardBox2.classList.toggle('flip')
-		setTimeout(() => {
-			// cardBox1Children[0].style.display = 'block'
-			// cardBox1Children[1].style.display = 'none'
-			toggleFlip(cardBox1Children[0], cardBox1Children[1], 'front')
 		
-			// cardBox2Children[0].style.display = 'block'
-			// cardBox2Children[1].style.display = 'none'
+		setTimeout(() => {
+
+			toggleFlip(cardBox1Children[0], cardBox1Children[1], 'front')
 			toggleFlip(cardBox2Children[0], cardBox2Children[1], 'front')
 		
 			cardsFlipped = []
@@ -123,8 +146,6 @@ function flipToFront() {
 }
 
 function flipToBack(children) {
-	// children[0].style.display = 'none'
-	// children[1].style.display = 'block'
 	toggleFlip(children[0], children[1], 'back')
 }
 
