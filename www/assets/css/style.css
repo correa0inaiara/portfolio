@@ -1,6 +1,6 @@
 * {
 	scroll-behavior: smooth;
-	font-family: cursive, sans-serif;
+	font-family: cursive, "Open Sans",sans-serif;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -15,7 +15,7 @@ body {
 	height: auto;
 	position: relative;
 	margin: 0 auto;
-	max-width: 500px;
+	max-width: 700px;
 }
 
 /* header */
@@ -23,6 +23,8 @@ body {
 header {
 	background-color: var(--fourth-color);
     text-align: center;
+	border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     padding: 30px 15px;
 }
 
@@ -57,6 +59,10 @@ nav ul li {
 	padding: 10px 5px;
 }
 
+nav ul li a {
+	font-size: 1.1rem;
+}
+
 a {
 	text-decoration: none;
 }
@@ -89,16 +95,12 @@ section h3 {
 	color: var(--fourth-color);
 }
 
-/* section h4 {
-	line-height: 1.6;
-	text-align: center;
-    color: var(--third-color);
-} */
-
 section p {
-	line-height: 1.6;
-	color: var(--second-color);
-    text-align: justify;
+	margin: 10px 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--second-color);
+    text-align: center;
 }
 
 /* home */
@@ -119,19 +121,6 @@ section p {
     border-radius: 10px;
     color: var(--second-color);
     background-color: var(--third-color);
-
-
-    /* color: var(--first-color);
-    background-color: var(--second-color); */
-
-	/*     font-size: 1.1rem;
-    padding: 10px;
-    margin-top: 10px;
-    color: var(--second-color);
-    background-color: var(--third-color);
-    text-align: center;
-    border-radius: 10px;
-    text-transform: uppercase; */
 }
 
 /* skills */
@@ -159,7 +148,7 @@ section p {
 
 /* projects */
 
-.list {
+#projects .list {
 	list-style-type: none;
 	display: grid;
 	grid-template-columns: 1fr;
@@ -196,7 +185,6 @@ section p {
 }
 
 .list-item__site {
-	/* border-left: 10px solid rgb(16 16 82); */
 	font-size: 15px;
 	height: 40px;
 	color: var(--first-color);
@@ -247,7 +235,21 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
-	.list {
+	#skills ul {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	#projects .list {
 		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	#skills ul {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+	
+	#projects .list {
+		grid-template-columns: 1fr 1fr 1fr;
 	}
 }
