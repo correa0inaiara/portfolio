@@ -62,18 +62,64 @@ main {
 	grid-template-columns: 1fr 1fr;
 	gap: 15px;
 	margin: 50px 0;
+	perspective: 1000px;
 }
 
 .card-box {
+	box-shadow: 2px 2px 3px #434a42;
 	padding: 10px;
 	background-color: var(--third-color);
 	margin: 0 auto;
 	z-index: 1;
-	animation: rotateToFront 1s ease-in-out;
+	/* animation: rotateToFront 1s ease-in-out; */
+	transform: scale(1);
+    transform-style: preserve-3d;
+	transition: transform .9s ease-in-out;
 }
 
+/* .card-box:active {
+	transform: scale(0.97);
+	transition: transform .2s;
+} */
+
 .card-box.flip {
-	animation: rotateToBack 1s ease-in-out;
+	transform: rotateY(180deg);
+	/* animation: rotateToBack 1s ease-in-out; */
+	
+	/* transform: scale(0.97); */
+	transition: transform .9s ease-in-out;
+}
+
+#overlay {
+	position: absolute;
+    z-index: 1;
+    top: -20px;
+	left: -13px;
+    height: calc(100% + 40px);
+    width: calc(100% + 30px);
+    background-color: #434a42d1;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	opacity: 1;
+	transition: opacity ease-in-out .2s;
+}
+
+#overlay.hide {
+	z-index: 0;
+	opacity: 0;
+}
+
+#overlay button {
+	margin-bottom: 15px;
+	width: 80%;
+	max-width: 260px;
+	padding: 15px;
+	font-size: 1rem;
+	box-shadow: none;
+	color: var(--first-color);
+    background-color: var(--fourth-color);
 }
 
 @keyframes rotateToFront {
@@ -95,12 +141,14 @@ main {
 }
 
 .card-box img {
-	width: 100px;
-	height: 140px;
+	width: 94px;
+	height: 80px;
 	z-index: 0;
+	/* backface-visibility: hidden;  */
 }
 
 .card-front {
+	/* transform: rotateY(180deg); */
 	display: block;
 }
 
@@ -132,7 +180,12 @@ footer {
 }
 
 @media only screen and (min-width: 1024px) {
+	
 	.game {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	.card-box img {
+		height: 140px;
 	}
 }

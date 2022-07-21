@@ -1,10 +1,15 @@
-const cardBoxes = document.getElementById('board').children
+const cardBoxes = document.querySelectorAll('.game .card-box')
 let cardsFlipped = []
 let sameCards = []
 let score = 0
+let cardBoardLocked = false
 
 function handleStartGame() {
-	showCards()
+	const overlay = document.getElementById('overlay')
+	overlay.className = 'hide'
+	setTimeout(() => {
+		showCards()
+	}, 200)
 }
 
 function showCards() {
@@ -31,6 +36,10 @@ function handleClick (event) {
 		const cardBox = element.parentElement
 		const children = cardBox.children
 		const cardBoxId = cardBox.id
+
+		if (cardBoardLocked) {
+			return;
+		}
 		
 		if (sameCards.length > 0) {
 			const found = sameCards.find(item => {
@@ -55,6 +64,7 @@ function handleClick (event) {
 				})
 			} else {
 				if (cardsFlipped.length === 1) {
+					cardBoardLocked = true
 					cardsFlipped.push({
 						id: cardBoxId,
 						src: srcChild2
@@ -68,6 +78,7 @@ function handleClick (event) {
 						})
 						sumPoints()
 						cardsFlipped = []
+						cardBoardLocked = false
 					} else {
 						flipToFront()
 					}
@@ -86,6 +97,7 @@ function handleResetScore(event) {
 function handleNewGame(event) {
 	sameCards = []
 	cardsFlipped = []
+	cardBoardLocked = false
 
 	for (var cardBox of cardBoxes) {
 		const flipped = cardBox.className === 'card-box flip' ? true : false
@@ -141,6 +153,7 @@ function flipToFront() {
 			toggleFlip(cardBox2Children[0], cardBox2Children[1], 'front')
 		
 			cardsFlipped = []
+			cardBoardLocked = false
 		}, 500)
 	}, 1000)
 }
