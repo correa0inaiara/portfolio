@@ -21,7 +21,7 @@ body {
 /* header */
 
 header {
-	background-color: var(--fourth-color);
+	background-color: var(--third-color);
     text-align: center;
 	border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -45,7 +45,7 @@ nav {
 	border-radius: 10px;
     padding: 15px;
     color: var(--second-color);
-    background-color: var(--fourth-color);
+    /* background-color: var(--fourth-color); */
 }
 
 nav ul {
@@ -85,14 +85,14 @@ main {
 
 /* section */
 section {
-	margin: 15px;
+	margin: 80px 15px;
 }
 
 section h3 {
 	text-align: center;
 	text-transform: uppercase;
 	margin: 25px 0;
-	color: var(--fourth-color);
+	color: var(--third-color);
 }
 
 section p {
